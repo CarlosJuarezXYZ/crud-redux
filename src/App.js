@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+import store from "./app/store";
+import Average from "./components/layout/Average";
+import Clients from "./components/layout/Clients";
+import FormClient from "./components/layout/FormClient";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Clients/>
+      <FormClient/>
+    </Provider>
   );
 }
 
