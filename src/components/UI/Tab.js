@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { colors } from "../../ui";
 
-export default function Link({ children }) {
+export default function Tab({ children }) {
   return <StyledLink>{children}</StyledLink>;
 }
 

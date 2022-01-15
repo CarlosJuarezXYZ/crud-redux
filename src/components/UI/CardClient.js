@@ -5,28 +5,7 @@ import Button from "./Button";
 import ImageClient from "./ImageClient";
 
 export default function CardClient({ name, lastname, birthday }) {
-  function transformTime(birthday) {
-    const year = new Date(birthday).getFullYear();
-    const month = new Date(birthday).getMonth();
-    const day = new Date(birthday).getDate();
-    const months = [
-      "January",
-      "Febrary",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "Agust",
-      "Septmeber",
-      "October",
-      "November",
-      "December",
-    ];
-
-    return `${months[month]} ${day},${year}`;
-  }
-
+ 
   return (
     <CardContainer>
       <ContainerImage>
@@ -40,7 +19,7 @@ export default function CardClient({ name, lastname, birthday }) {
           <TextBold>LastName:</TextBold> {lastname}
         </Text>
         <Text>
-          <TextBold>Birthday:</TextBold> {transformTime(birthday)}
+          <TextBold>Birthday:</TextBold> {birthday}
         </Text>
       </ContainerOptions>
       <ContainerButton>
@@ -67,17 +46,14 @@ const ContainerImage = styled.div`
 const ContainerOptions = styled.div`
   display: flex;
   flex-direction: column;
-  //gap: 10px;
   font-family: 12px;
   margin-bottom: 10px;
   color: ${colors.textCard};
 `;
 
 const Text = styled.p`
-  //color: ${colors.textCard};
   color: black;
   display: flex;
-  //flex-direction: column;
   align-items: center;
   gap: 10px;
   width: 100%;

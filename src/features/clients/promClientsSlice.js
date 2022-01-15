@@ -2,21 +2,22 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { BASE_URI } from "../../app/config";
 
 export const fetchClientsProm = createAsyncThunk(
-    "clients/fetchClients",
+    "clients/fetchClientsProm",
     async() => {
-        const response = await fetch(`${BASE_URI}`,{
+        const response = await fetch(`${BASE_URI}/ages`,{
             method: "GET",
         });
         const data = await response.json();
         if(!response.ok){
             throw new Error("Something went Wrong");
         }
-        return {clientsProm:data}
+        console.log("promedio de data",data)
+        return {average:data}
     }
 );
 
 const clientsPromSlice = createSlice({
-    nanme:"clientsProm",
+    name:"average",
     initialState: {
         status: "idle",
         error: null,
@@ -31,7 +32,7 @@ const clientsPromSlice = createSlice({
         },
         [fetchClientsProm.fulfilled]: (state, action) => {
             state.status = "succeded";
-            state.items = action.payload.clientsProm;
+            state.items = action.payload.average;
         },
         [fetchClientsProm.error]: (state, action) => {
             state.status = "failed";

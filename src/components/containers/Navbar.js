@@ -1,17 +1,28 @@
 import styled from "@emotion/styled";
 import { colors } from "../../ui";
-import Link from "../UI/Link";
+import Tab from "../UI/Tab";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
-  const arrayLink = [
-    { id: "a", option: "Clients" },
-    { id: "b", option: "Average" },
-  ];
   return (
     <StyledNavar>
-      {arrayLink.map((link) => (
-        <Link key={link.id}>{link.option}</Link>
-      ))}
+      <ContainerLink>
+        <Link to="/">
+          <Tab>Create</Tab>
+        </Link>
+      </ContainerLink>
+
+      <ContainerLink>
+        <Link to="/clients">
+          <Tab>Clients</Tab>
+        </Link>
+      </ContainerLink>
+
+      <ContainerLink>
+        <Link to="/average">
+          <Tab>Average</Tab>
+        </Link>
+      </ContainerLink>
     </StyledNavar>
   );
 }
@@ -31,6 +42,15 @@ const StyledNavar = styled.div`
   @media (max-width: 500px) {
     display: flex;
     flex-direction: inherit;
+    width: 100%;
+  }
+`;
+
+const ContainerLink = styled.div`
+  width: 30%;
+  height: auto;
+  border-radius: 5px;
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;

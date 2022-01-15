@@ -7,7 +7,6 @@ export default function CardContainer({ children }) {
 
 const StyledDiv = styled.div`
   height: 500px;
-  //width: 100%;
   background-color: ${colors.bgCard};
   border-radius: 20px;
   padding: 14px;

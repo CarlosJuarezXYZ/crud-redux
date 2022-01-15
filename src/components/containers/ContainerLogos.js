@@ -9,7 +9,7 @@ export default function ContainerLogos() {
     },
     {
       id: 2,
-      src: "https://static.wikia.nocookie.net/logopedia/images/7/7f/Ripley_logo_R_con_fondo_1993-2009.png/revision/latest/scale-to-width-down/250?cb=20191020222603",
+      src: "https://www.smoothskin.com/cl/wp-content/uploads/sites/14/2018/01/ripley-logo.png",
       view: true,
     },
     {

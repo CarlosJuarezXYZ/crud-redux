@@ -27,7 +27,6 @@ const StyledInput = styled.input`
   font-size: 16px;
   line-height: 21px;
   color: ${colors.text};
-  //padding: 0 15px;
   border-radius: 10px;
   border: none;
   width: 100%;
