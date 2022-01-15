@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { fetchCreateClients } from "../../features/clients/createClientsSlice";
@@ -24,9 +24,10 @@ export default function FormClient() {
       return setValidForm(true);
     }
     dispatch(fetchCreateClients({ name, lastName, dateOfBirth }));
-    history.push("/clients");
-    
+    history.push("/average");
   };
+
+
 
   return (
     <ContainerGeneral>
