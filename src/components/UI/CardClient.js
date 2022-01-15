@@ -24,7 +24,6 @@ export default function CardClient({ name, lastname, birthday }) {
       </ContainerOptions>
       <ContainerButton>
         <Button
-          // onClick={onClick}
           size="medium"
           bg={colors.bgButton}
           color={colors.text}

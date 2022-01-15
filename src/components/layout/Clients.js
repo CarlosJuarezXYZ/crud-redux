@@ -22,6 +22,7 @@ export default function Clients() {
         {clients.map((client)=>{
                     return(
                         <CardClient
+                        key={client.id}
                         name={client.name}
                         lastname={client.lastName}
                         birthday={client.dateOfBirth}

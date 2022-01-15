@@ -5,7 +5,6 @@ import { BASE_URI } from "../../app/config";
 export const fetchCreateClients = createAsyncThunk(
     "createClients/fetchCreateClients",
     async(client) => {
-        console.log("cliente de diego",client);
         const response = await fetch(`${BASE_URI}`,{
             method: 'POST',
             headers: {
@@ -15,7 +14,7 @@ export const fetchCreateClients = createAsyncThunk(
         });
 
         const data = await response.json()
-        console.log("data 2",data);
+     
         if(!response.ok){
             throw new Error(data);
         }

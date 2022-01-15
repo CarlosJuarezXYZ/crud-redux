@@ -11,7 +11,7 @@ export const fetchClientsProm = createAsyncThunk(
         if(!response.ok){
             throw new Error("Something went Wrong");
         }
-        console.log("promedio de data",data)
+   
         return {average:data}
     }
 );

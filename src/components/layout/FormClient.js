@@ -20,7 +20,6 @@ export default function FormClient() {
   const handleSubmit = (e) => {
     let dataBirthday = birthday.split("-");
     let dateOfBirth = `${dataBirthday[2]}/${dataBirthday[1]}/${dataBirthday[0]}`;
-    console.log(name);
     if (!name || !lastName || !birthday) {
       return setValidForm(true);
     }

@@ -11,7 +11,6 @@ export const fetchClients = createAsyncThunk(
         if(!response.ok){
             throw new Error("Something went Wrong");
         }
-        console.log("esta es la data a comparar",data);
         return {clients:data}
     }
 );
